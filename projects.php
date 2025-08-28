@@ -1,7 +1,11 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) session_start();
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/config/config.php';
 ?>
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,17 +20,18 @@ require_once __DIR__ . '/config/config.php';
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
     <nav id="nav">
       <a href="home.php">Home</a>
-      <a class="active" href="projects.php">Projects</a>
-      <a href="certificates.php">Certificates</a>
       <a href="about.php">About</a>
       <a href="education.php">Education</a>
+      <a class="active" href="projects.php">Projects</a>
+      <a href="certificates.php">Certificates</a>
+      
       <a href="contact.php">Contact</a>
       <?php if (!empty($_SESSION['admin_id'])): ?>
-    <a class="btn ghost" href="<?= BASE_URL ?>admin/index.php" style="margin-left:1rem">Dashboard</a>
-    <a class="btn ghost" href="<?= BASE_URL ?>admin/logout.php">Logout</a>
-  <?php else: ?>
-    <a class="btn ghost" href="<?= BASE_URL ?>admin/login.php" style="margin-left:1rem">Admin</a>
-  <?php endif; ?>
+        <a class="btn ghost" href="<?= BASE_URL ?>admin/index.php" style="margin-left:1rem">Dashboard</a>
+        <a class="btn ghost" href="<?= BASE_URL ?>admin/logout.php">Logout</a>
+      <?php else: ?>
+        <a class="btn ghost" href="<?= BASE_URL ?>admin/login.php" style="margin-left:1rem">Admin</a>
+      <?php endif; ?>
     </nav>
   </div>
 </header>

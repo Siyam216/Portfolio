@@ -14,10 +14,11 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
     <nav id="nav">
       <a href="home.php">Home</a>
+        <a href="about.php">About</a>
+      <a href="education.php">Education</a>
       <a href="projects.php">Projects</a>
       <a class="active" href="certificates.php">Certificates</a>
-      <a href="about.php">About</a>
-      <a href="education.php">Education</a>
+    
       <a href="contact.php">Contact</a>
       <?php if (!empty($_SESSION['admin_id'])): ?>
         <a class="btn ghost" href="<?= BASE_URL ?>admin/index.php" style="margin-left:1rem">Dashboard</a>

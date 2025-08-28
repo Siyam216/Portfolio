@@ -13,8 +13,13 @@ $res = $conn->query("SELECT * FROM certificates ORDER BY created_at DESC");
 <header class="site-header"><div class="container nav">
   <div class="brand">Admin — Certificates</div>
   <nav id="nav" style="margin-left:auto;display:flex;gap:.6rem">
+       <a class="btn ghost" href="<?= BASE_URL ?>home.php" target="_blank" rel="noopener">View Site</a>
+        
     <a class="btn ghost" href="<?= BASE_URL ?>admin/index.php">Projects Admin</a>
-    <a class="btn ghost" href="<?= BASE_URL ?>home.php" target="_blank" rel="noopener">View Site</a>
+<a class="btn ghost" href="<?= BASE_URL ?>admin/messages/index.php">Messages</a>    
+ 
+
+
     <a class="btn ghost" href="<?= BASE_URL ?>admin/logout.php">Logout</a>
   </nav>
 </div></header>

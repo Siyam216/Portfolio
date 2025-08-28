@@ -374,3 +374,147 @@ body.is-dark{
 
 /* Optional: subtle accent for certificate titles */
 .cert-badge { color:#c7d2fe; font-weight:600; }
+
+
+/* ===== Admin Messages — polished list ===== */
+.msg-board{
+  margin:2.2rem auto;
+  max-width: 1050px;
+  padding: 1.2rem 1.2rem 1.6rem;
+  border:1px solid var(--border);
+  border-radius: 1.1rem;
+  background: linear-gradient(180deg, #0f172acc, #0b1020b3);
+  box-shadow: var(--shadow);
+}
+.msg-board__head h1{ margin:.2rem 0 .25rem; }
+.msg-board__head .muted{ margin:0 0 1rem; }
+
+.msg-table{ display:grid; gap:.8rem; }
+
+.msg-row{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap: .8rem;
+  padding: .9rem 1rem;
+  border:1px solid var(--border);
+  border-radius: .9rem;
+  background: var(--card);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .12s ease;
+}
+.msg-row:hover{
+  border-color: #3a4b6b;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  transform: translateY(-1px);
+}
+.msg-row.is-unread{ box-shadow: inset 0 0 0 1px rgba(142,68,173,.25); }
+.msg-row.open{ border-color:#4b5f87; }
+
+.msg-left{ display:flex; gap:.9rem; align-items:flex-start; }
+.avatar{
+  width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;
+  font-weight:800; letter-spacing:.3px;
+  color:#e7ecf3; background:#1c243a; border:1px solid var(--border);
+}
+.meta{ flex:1; min-width:0; }
+
+.meta-top{ display:flex; flex-wrap:wrap; align-items:center; gap:.45rem; }
+.status{
+  font-size:.75rem; padding:.2rem .55rem; border-radius:999px;
+  border:1px solid var(--border); background:#111827aa; color:#cbd5e1;
+}
+.status.new{ background:#2a1840; border-color:#3e2860; color:#e9d5ff; }
+.status.ok{ background:#132a1f; border-color:#284b3b; color:#bbf7d0; }
+.name{ font-size:1.02rem; }
+.email{ color:#9cc1ff; text-decoration:underline; }
+.subject{ color:#cbd5e1; margin:.15rem 0 .25rem; }
+.subject span{ color:#e7ecf3; }
+.time{ font-size:.9rem; }
+
+.preview{
+  color:var(--muted); margin:.15rem 0 .6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+.row-actions{ display:flex; flex-wrap:wrap; gap:.5rem; }
+.msg-right{ display:flex; gap:.45rem; align-items:flex-start; }
+
+/* Buttons tuning inside rows */
+.btn.small{ padding:.5rem .8rem; border-radius:.6rem; font-size:.9rem; }
+
+/* Responsive */
+@media (max-width: 860px){
+  .msg-row{ grid-template-columns: 1fr; }
+  .msg-right{ display:none; }
+}
+
+
+/* ===== Contact page layout fix ===== */
+.contact-hero { margin: 2rem 0 1rem; }
+.contact-hero p { color: var(--muted); }
+
+/* Card container */
+.contact-card{
+  margin: 1rem auto 3rem;
+  max-width: 900px;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 1.1rem;
+  background: linear-gradient(180deg, #0f172acc, #0b1020b3);
+  box-shadow: var(--shadow);
+}
+
+/* Form grid */
+.contact-form{
+  display: grid;
+  gap: 1rem;
+}
+
+/* Two-column row for Name + Email on desktop */
+.contact-form .form-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Labels stack text over input */
+.contact-form label{
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+
+/* Make top-level labels (Subject, Message) span full width */
+.contact-form > label{ grid-column: 1 / -1; }
+
+/* Inputs/textarea look */
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+  padding: .8rem .9rem;
+  border-radius: .7rem;
+  border: 1px solid var(--border);
+  background: #111827;
+  color: #e5e7eb;
+}
+.contact-form textarea{ min-height: 160px; resize: vertical; }
+.contact-form input:focus,
+.contact-form textarea:focus{ outline: none; border-color: #3b4c72; }
+
+/* Actions row */
+.contact-form .actions{
+  grid-column: 1 / -1;
+  margin-top: .3rem;
+}
+
+/* Responsive: stack to single column on small screens */
+@media (max-width: 700px){
+  .contact-form .form-row{ grid-template-columns: 1fr; }
+  .contact-card{ padding: 1rem; }
+  .contact-form textarea{ min-height: 180px; }
+}
