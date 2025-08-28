@@ -51,35 +51,46 @@ body.is-dark{
   color:var(--fg);padding:.35rem .6rem;border-radius:.6rem;cursor:pointer
 }
 
-/* ===== Hero Card ===== */
+/* ===== Hero Card (large, centered) ===== */
 .hero-card{
-  margin:2rem 0 2.5rem;
+  margin:2rem 0;
   display:grid;gap:1.5rem;grid-template-columns: 220px 1fr;
   padding:1.25rem;border-radius:1.25rem;border:1px solid var(--border);
   background: linear-gradient(180deg, #0f172acc, #0b1020b3);
   box-shadow: var(--shadow);
 }
+.hero-card.big{
+  margin:3rem auto;
+  max-width: 950px;              /* wider for a bold look */
+  padding:2rem;
+  grid-template-columns: 280px 1fr;
+}
+
 .avatar-wrap{
   width:220px;height:220px;border-radius:1rem;overflow:hidden;
   border:1px solid var(--border);
   background:#0a0f1f;
   display:grid;place-items:center;
 }
+.hero-card.big .avatar-wrap{width:260px;height:260px;border-radius:1.25rem}
+
 .avatar-wrap img{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:saturate(1.05) contrast(1.02);
 }
+
 .hero-right{display:flex;flex-direction:column;gap:.65rem}
 .badge{
   display:inline-block;align-self:flex-start;
   padding:.25rem .6rem;border-radius:999px;
   font-size:.8rem;letter-spacing:.3px;
-  background: #1c243a;border:1px solid var(--border);color:var(--muted);
+  background:#1c243a;border:1px solid var(--border);color:var(--muted);
 }
 .name{font-size:clamp(1.8rem,4vw,2.6rem);margin:.2rem 0 .1rem}
 .tagline{color:#c7d2fe;font-weight:600;margin:0}
 .bio{color:var(--muted);margin:.2rem 0 0;max-width:62ch}
 
+/* ===== Buttons ===== */
 .cta-row{display:flex;gap:.6rem;margin-top:.4rem}
 .btn{
   display:inline-block;text-decoration:none;border-radius:.8rem;
@@ -92,21 +103,15 @@ body.is-dark{
 .btn.ghost{background:transparent;color:var(--fg);border-color:var(--border)}
 .btn.ghost:hover{background:#1f2937}
 
-.socials{display:flex;gap:.75rem;margin-top:.35rem}
+/* ===== Socials (GitHub, WhatsApp, Codeforces, LeetCode) ===== */
+.socials{display:flex;gap:1rem;margin-top:.8rem;align-items:center}
 .socials a{
-  width:40px;height:40px;border-radius:10px;display:grid;place-items:center;
-  color:#cbd5e1;border:1px solid var(--border);background:#111827aa;
+  width:45px;height:45px;border-radius:12px;display:grid;place-items:center;
+  font-size:1.3rem;color:#cbd5e1;border:1px solid var(--border);
+  background:#111827aa;transition:.2s ease;
 }
 .socials a:hover{background:#1f2937;color:#fff}
-
-/* ===== Cards ===== */
-.grid{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr);margin:2rem 0 3rem}
-.card{
-  border:1px solid var(--border);background:var(--card);
-  padding:1rem;border-radius:1rem;box-shadow: var(--shadow);
-}
-.card h2{margin:.2rem 0 .5rem}
-.card p{color:var(--muted)}
+.socials img{width:24px;height:24px;filter:brightness(0) invert(1)} /* make SVGs white */
 
 /* ===== Footer ===== */
 .site-footer{
@@ -118,19 +123,22 @@ body.is-dark{
 @media (max-width: 900px){
   .hero-card{grid-template-columns: 160px 1fr}
   .avatar-wrap{width:160px;height:160px}
-}
-@media (max-width: 700px){
-  .grid{grid-template-columns:1fr 1fr}
+  .hero-card.big{grid-template-columns: 200px 1fr;max-width: 96%}
+  .hero-card.big .avatar-wrap{width:200px;height:200px}
 }
 @media (max-width: 560px){
-  .grid{grid-template-columns:1fr}
   #nav{display:none;flex-direction:column;width:100%;padding:.5rem 0}
   #nav.open{display:flex}
   .hamburger{display:inline-block}
-  .hero-card{
+
+  .hero-card,
+  .hero-card.big{
     grid-template-columns:1fr;
     padding:1rem;
+    margin:2rem auto;
+    max-width: 96%;
   }
   .avatar-wrap{width:120px;height:120px;border-radius:.9rem}
+  .hero-card.big .avatar-wrap{width:140px;height:140px}
   .bio{max-width:100%}
 }
