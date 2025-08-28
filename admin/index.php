@@ -18,6 +18,8 @@ $res = $conn->query("SELECT id, title, image, link, created_at FROM projects ORD
     <div class="brand">Admin — Projects</div>
     <nav id="nav" style="margin-left:auto;display:flex;gap:.6rem">
       <a class="btn ghost" href="<?= BASE_URL ?>home.php">View Site</a>
+      <a class="btn ghost" href="<?= BASE_URL ?>admin/certs/index.php">Certificates Admin</a>
+
       <a class="btn ghost" href="logout.php">Logout (<?= htmlspecialchars($_SESSION['admin_name'] ?? '') ?>)</a>
     </nav>
   </div>
