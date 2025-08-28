@@ -142,3 +142,53 @@ body.is-dark{
   .hero-card.big .avatar-wrap{width:140px;height:140px}
   .bio{max-width:100%}
 }
+
+
+
+/* ===== About Page ===== */
+.about-card{
+  margin:3rem auto;
+  max-width:950px;
+  padding:2rem;
+  border-radius:1.25rem;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, #0f172acc, #0b1020b3);
+  box-shadow:var(--shadow);
+}
+
+.about-card h1{
+  font-size:2rem;
+  margin-bottom:1rem;
+}
+
+.about-card .intro{
+  font-size:1.05rem;
+  color:var(--muted);
+  margin-bottom:2rem;
+}
+
+.about-grid{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns:repeat(3,1fr);
+}
+
+.about-box{
+  padding:1rem;
+  border-radius:1rem;
+  border:1px solid var(--border);
+  background:var(--card);
+  box-shadow:var(--shadow);
+}
+
+.about-box h2{
+  margin:.2rem 0 .6rem;
+  color:#c7d2fe;
+}
+
+.about-box p{color:var(--muted);line-height:1.6}
+
+/* Responsive */
+@media(max-width:800px){
+  .about-grid{grid-template-columns:1fr}
+}
