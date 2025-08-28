@@ -21,7 +21,12 @@ require_once __DIR__ . '/config/config.php';
       <a href="about.php">About</a>
       <a href="education.php">Education</a>
       <a href="contact.php">Contact</a>
-      <a class="btn ghost" href="admin/login.php" style="margin-left:1rem">Admin</a>
+      <?php if (!empty($_SESSION['admin_id'])): ?>
+    <a class="btn ghost" href="<?= BASE_URL ?>admin/index.php" style="margin-left:1rem">Dashboard</a>
+    <a class="btn ghost" href="<?= BASE_URL ?>admin/logout.php">Logout</a>
+  <?php else: ?>
+    <a class="btn ghost" href="<?= BASE_URL ?>admin/login.php" style="margin-left:1rem">Admin</a>
+  <?php endif; ?>
     </nav>
   </div>
 </header>

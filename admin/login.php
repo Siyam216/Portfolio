@@ -2,6 +2,12 @@
 require_once __DIR__ . '/../config/db.php';
 if (session_status() === PHP_SESSION_NONE) session_start();
 
+/* ✅ If already logged in, skip login form */
+if (!empty($_SESSION['admin_id'])) {
+  header('Location: index.php');
+  exit;
+}
+
 $error = '';
 $redirect = $_GET['redirect'] ?? 'index.php';
 
