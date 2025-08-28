@@ -20,6 +20,7 @@
         <a href="certificates.php">Certificates</a>
         
         <a href="contact.php">Contact</a>
+        <a class="btn ghost" href="admin/login.php" style="margin-left:1rem">Admin</a>
       </nav>
     </div>
   </header>
