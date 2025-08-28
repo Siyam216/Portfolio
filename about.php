@@ -15,6 +15,7 @@
       <nav id="nav">
         <a href="home.php">Home</a>
         <a href="about.php" class="active">About</a>
+        <a href="education.php">Education</a>
         <a href="projects.php">Projects</a>
         <a href="certificates.php">Certificates</a>
         <a href="contact.php">Contact</a>
