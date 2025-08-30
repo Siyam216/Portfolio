@@ -43,12 +43,11 @@ require_once __DIR__ . '/config/config.php';
       <div class="hero-right">
         <p class="badge">Portfolio</p>
         <h1 class="name">Siyam Khan</h1>
-        <p class="tagline">Software Developer • Web & PHP • JavaScript</p>
+        <p class="tagline">Competitive Programmer • Web Designer • AI & ML Enthusiast</p>
         <p class="bio">
-          I’m a passionate developer who loves building clean, usable web
-          experiences. I work with PHP, JavaScript, HTML/CSS and I’m exploring
-          databases to power dynamic projects. I enjoy learning in public and
-          turning ideas into products.
+          I’m deeply passionate about competitive programming, where I enjoy solving complex problems and improving my logical thinking and problem-solving skills.
+          Along with that,My curiosity also drives me toward the exciting fields of AI research and machine learning, where I constantly explore innovative techniques and emerging technologies.
+          I love learning new algorithms and ideas, always looking for ways to expand my knowledge and apply it to real-world challenges.
         </p>
 
         <div class="cta-row">
