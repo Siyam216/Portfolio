@@ -42,7 +42,7 @@ require_once __DIR__ . '/config/config.php';
         <article class="edu-item">
           <div class="edu-dot"></div>
           <div class="edu-logo">
-            <!-- Put your file here: assets/img/edu/kuet.png -->
+    
             <img src="assets/img/edu/kuet.png" alt="Khulna University of Engineering & Technology (KUET) logo">
           </div>
           <div class="edu-body">
@@ -60,7 +60,6 @@ require_once __DIR__ . '/config/config.php';
         <article class="edu-item">
           <div class="edu-dot"></div>
           <div class="edu-logo">
-            <!-- Put your file here: assets/img/edu/brahmanbaria.png -->
             <img src="assets/img/edu/brahmanbaria.jpeg" alt="Brahmanbaria Govt. College logo">
           </div>
           <div class="edu-body">
@@ -77,7 +76,6 @@ require_once __DIR__ . '/config/config.php';
         <article class="edu-item">
           <div class="edu-dot"></div>
           <div class="edu-logo">
-            <!-- Put your file here: assets/img/edu/shyamagram.png -->
             <img src="assets/img/edu/shyamagram.jpg" alt="Shyamagram Mohinikishore School & College logo">
           </div>
           <div class="edu-body">

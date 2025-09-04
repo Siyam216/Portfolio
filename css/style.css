@@ -1,14 +1,14 @@
 /* ===== Theme ===== */
 :root{
-  --bg: #0b1020;           /* deep navy */
+  --bg: #0b1020;          
   --grad1: #111c3a;
   --grad2: #0f172a;
-  --fg: #e7ecf3;           /* light text */
-  --muted:#9fb0c5;         /* soft slate */
-  --accent:#8e44ad;        /* purple */
-  --accent-2:#22c55e;      /* green */
-  --card:#0f172ac0;        /* glass */
-  --border:#26334b;        /* slate border */
+  --fg: #e7ecf3;           
+  --muted:#9fb0c5;       
+  --accent:#8e44ad;       
+  --accent-2:#22c55e;      
+  --card:#0f172ac0;       
+  --border:#26334b;       
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
@@ -349,7 +349,7 @@ body.is-dark{
   color: var(--muted);
   margin: 0 0 .7rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3;        /* clamp preview to 3 lines */
+  -webkit-line-clamp: 3;       
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
